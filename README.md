@@ -1,6 +1,6 @@
-<h1 align="center" color="#6A6180">
+<h1 align="center">
 
-  <img src="https://github.com/jhonnydelima/nlw-02/blob/master/public/images/logo.png" color="#8257E5" width="150px"/>
+  <img src="https://github.com/jhonnydelima/nlw-02/blob/master/public/images/logo.svg" color="#8257E5" width="150px"/>
   <br>
   <br>
   Proffy | Sua plataforma de estudos online
@@ -24,6 +24,7 @@
 - [x] nunjucks
 * https://mozilla.github.io/nunjucks/
 
+<br>
 <h2> <img src="https://i.dlpng.com/static/png/6577858_preview.png" width="50px" align="center"/> How to use it: </h2>
 
 <h3> Steps <h3>
@@ -40,15 +41,10 @@
 $ npm install
 
 #start the server
-$ npm start
+$ npm run dev
 ```
 
-<h4> 3. Run the server on your terminal <h4>
-
-```
- $ npm run dev
-```
-
+<br>
 <p align="center">
   <a href="LICENSE" >
     <img alt="License" src="https://img.shields.io/badge/license-MIT-blueviolet">
