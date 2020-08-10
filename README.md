@@ -1,6 +1,6 @@
 <h1 align="center">
 
-  <img src="https://github.com/jhonnydelima/nlw-02/blob/master/public/images/logo.svg" color="#8257E5" width="150px"/>
+  <img src="https://github.com/jhonnydelima/nlw-02/blob/master/public/images/logo.svg" fill="#8257E5" width="250px"/>
   <br>
   <br>
   Proffy | Sua plataforma de estudos online
