@@ -1,7 +1,6 @@
 <h1 align="center">
 
-  <img src="https://github.com/jhonnydelima/nlw-02/blob/master/public/images/favicon.png" width="150px"/>
-  <br>
+  <img src="https://github.com/jhonnydelima/nlw-02/blob/master/public/images/favicon.png" width="100px"/>
   <br>
   Proffy | Sua plataforma de estudos online
 
