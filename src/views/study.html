@@ -30,34 +30,29 @@
                         <label for="subject">Matéria</label>
                         <select name="subject" id="subject">
                             <option value="" disabled="" hidden="">Selecione uma opção</option>
-                            <option value="1">Artes</option>
-                            <option value="2">Biologia</option>
-                            <option value="3">Ciências</option>
-                            <option value="4">Educação Física</option>
-                            <option value="5">Física</option>
-                            <option value="6">Geografia</option>
-                            <option value="7">História</option>
-                            <option value="8">Matemática</option>
-                            <option value="9">Português</option>
-                            <option value="10">Química</option>
+
+                            {%for subject in subjects %}
+                                <option value="{{loop.index}}" {{ "selected" if filters.subject == loop.index }}>
+                                    {{subject}}
+                                </option>
+                            {%endfor%}
                         </select>
                     </div>
                     <div class="select-block">
                         <label for="weekday">Dia da semana</label>
                         <select name="weekday" id="weekday">
                             <option value="" disabled="" hidden="">Selecione uma opção</option>
-                            <option value="0">Domingo</option>
-                            <option value="1">Segunda-feira</option>
-                            <option value="2">Terça-feira</option>
-                            <option value="3">Quarta-feira</option>
-                            <option value="4">Quinta-feira</option>
-                            <option value="5">Sexta-feira</option>
-                            <option value="6">Sábado</option>
+
+                            {%for weekday in weekdays %}
+                                <option value="{{loop.index0}}" {{ "selected" if filters.weekday == loop.index0 }}>
+                                    {{weekday}}
+                                </option>    
+                            {%endfor%}
                         </select>
                     </div>
                     <div class="input-block">
                         <label for="time">Hora</label>
-                        <input name="time" id="time" type="time">
+                        <input name="time" id="time" type="time" value="{{filters.time}}">
                     </div>
                     <button type="submit">Filtrar</button>
                 </form>
@@ -65,71 +60,29 @@
         </header>
 
         <main>
-            <article class="teacher-item">
-                <header>
-                    <img src="https://scontent.fqcj3-1.fna.fbcdn.net/v/t1.0-9/69515474_108567547176313_8095873272601640960_n.jpg?_nc_cat=111&_nc_sid=09cbfe&_nc_ohc=SgTAWExMd5cAX80du4a&_nc_ht=scontent.fqcj3-1.fna&oh=97ae46f9289070a0e033a57d2d72decd&oe=5F52E1D0" 
-                    alt="Marcelo Ferreira">
-                    <div>
-                        <strong>Marcelo Ferreira</strong>
-                        <span>Física</span>
-                    </div>
-                </header>
 
-                <p>Lorem ipsum lobortis etiam malesuada accumsan sapien.<br><br>Phasellus scelerisque 
-                venenatis blandit sodales odio cras auctor nam, aptent placerat purus egestas adipiscing 
-                egestas pharetra nunc imperdiet conubia nunc lorem ornare congue.</p>
-                
-                <footer>
-                    <p>Preço/hora<strong>R$ 20,00</strong></p>
-                    <button type="button">
-                        <img src="/images/icons/whatsapp.svg" alt="Whatsapp">Entrar em contato
-                    </button>
-                </footer>
-            </article>
+            {%for proffy in proffys %}
+                <article class="teacher-item">
+                    <header>
+                        <img
+                            src="{{proffy.avatar}}" 
+                            alt="{{proffy.name}}">
+                        <div>
+                            <strong>{{proffy.name}}</strong>
+                            <span>{{proffy.subject}}</span>
+                        </div>
+                    </header>
 
-            <article class="teacher-item">
-                <header>
-                    <img src="https://avatars2.githubusercontent.com/u/27383569?s=460&u=692a00b2cf047abe4c759bc253af695d7c9d9f4f&v=4" 
-                    alt="Jhonny Lima">
-                    <div>
-                        <strong>Jhonny Lima</strong>
-                        <span>Matemática</span>
-                    </div>
-                </header>
-
-                <p>Lorem ipsum lobortis etiam malesuada accumsan sapien.<br><br>Phasellus scelerisque 
-                venenatis blandit sodales odio cras auctor nam, aptent placerat purus egestas adipiscing 
-                egestas pharetra nunc imperdiet conubia nunc lorem ornare congue.</p>
-                
-                <footer>
-                    <p>Preço/hora<strong>R$ 20,00</strong></p>
-                    <button type="button">
-                        <img src="/images/icons/whatsapp.svg" alt="Whatsapp">Entrar em contato
-                    </button>
-                </footer>
-            </article>
-
-            <article class="teacher-item">
-                <header>
-                    <img src="https://scontent.fqcj3-1.fna.fbcdn.net/v/t1.0-9/83866804_2658485410935949_479891827151863808_n.jpg?_nc_cat=104&_nc_sid=09cbfe&_nc_ohc=Nv4837mG-N0AX_1YF1H&_nc_ht=scontent.fqcj3-1.fna&oh=ceb89891b53686c28d4c82fd1e7e6c11&oe=5F5089C2" 
-                    alt="Camila Schwab">
-                    <div>
-                        <strong>Camila Schwab</strong>
-                        <span>Educação Física</span>
-                    </div>
-                </header>
-
-                <p>Lorem ipsum lobortis etiam malesuada accumsan sapien.<br><br>Phasellus scelerisque 
-                venenatis blandit sodales odio cras auctor nam, aptent placerat purus egestas adipiscing 
-                egestas pharetra nunc imperdiet conubia nunc lorem ornare congue.</p>
-                
-                <footer>
-                    <p>Preço/hora<strong>R$ 20,00</strong></p>
-                    <button type="button">
-                        <img src="/images/icons/whatsapp.svg" alt="Whatsapp">Entrar em contato
-                    </button>
-                </footer>
-            </article>
+                    <p>{{proffy.bio}}</p>
+                    
+                    <footer>
+                        <p>Preço/hora<strong>R$ {{proffy.cost}}</strong></p>
+                        <a href="https://api.whatsapp.com/send?1=pt_BR&phone=55{{proffy.whatsapp}}&text=Tenho interesse na sua aula de {{proffy.subject}}, {{proffy.name}}" class="button" target="_blank">
+                            <img src="/images/icons/whatsapp.svg" alt="Whatsapp">Entrar em contato
+                        </a>
+                    </footer>
+                </article>
+            {%endfor%}
         </main>
     </div>
     

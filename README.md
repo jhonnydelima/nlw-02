@@ -1,6 +1,6 @@
 <h1 align="center">
 
-  <img src="https://github.com/jhonnydelima/nlw-02/blob/master/public/images/logo.svg" fill="#8257E5" width="250px"/>
+  <img src="https://github.com/jhonnydelima/nlw-02/blob/master/public/images/favicon.png" width="250px"/>
   <br>
   <br>
   Proffy | Sua plataforma de estudos online
@@ -44,6 +44,7 @@ $ npm install
 $ npm run dev
 ```
 
+<br>
 <br>
 <p align="center">
   <a href="LICENSE" >
