@@ -131,6 +131,11 @@
     background: var(--color-secondary-dark);
 }
 
+#page-study main .no-results {
+    margin: 12rem auto;
+    max-width: 30rem;
+    text-align: center;
+}
 
 @media (min-width: 700px) {
     #page-study #container {

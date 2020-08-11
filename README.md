@@ -22,6 +22,8 @@
 * https://nodemon.io/
 - [x] nunjucks
 * https://mozilla.github.io/nunjucks/
+- [x] sqlite
+* https://www.sqlite.org/
 
 <br>
 <h2> <img src="https://i.dlpng.com/static/png/6577858_preview.png" width="50px" align="center"/> How to use it: </h2>
